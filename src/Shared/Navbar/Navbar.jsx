@@ -1,0 +1,140 @@
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import { MdMenu } from "react-icons/md";
+import { HiMiniXMark } from "react-icons/hi2";
+import './Navbar.css'
+import logo from '../../assets/img/WEG_LOGO.jpg'
+const Navbar = () => {
+    const navLink = [
+        { id: 1, name: "Home", to: "" },
+        {
+            id: 2, name: "Journals", to: "/subjects",
+            subNav: true,
+            subNavItems: [
+                { id: 1, name: "Journals by Subjects", to: "/subjects" },
+                { id: 2, name: "Complete List of Journals", to: "" }
+            ]
+
+        },
+        { id: 3, name: "Research", to: "" },
+        { id: 4, name: "About Us", to: "" },
+        { id: 6, name: "Membership", to: "" },
+        { id: 7, name: "Contact", to: "" },
+    ]
+
+    const [changeColor, setChangeColor] = useState()
+
+    useEffect(() => {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY >= 90) setChangeColor(true);
+            else setChangeColor(false);
+        })
+    }, [])
+
+    const [isOpen, setIsOpen] = useState(false)
+    const [subOpen, setSubOpen] = useState(false)
+    return (
+        <div className="fixed top-0 w-full z-50">
+            <div>
+                {/* --for big device-- */}
+
+                <div className={`xl:px-20 lg:px-10 md:px-14 sm:px-12 px-12 py-6 bg-[#fff] ${changeColor ? "bg-[#ffffff] py-2 border-b border-[#ffffff] shadow-lg border" : ""}}`}>
+                    <div className='flex items-center justify-between'>
+
+                        <div className="w-1/6">
+                            <img className="lg:w-[50%] md:w-[50%]" src={logo} alt="" />
+                        </div>
+
+                        <div className='lg:flex items-center xl:space-x-12 lg:space-x-8 hidden'>
+                            <div className='flex items-center xl:space-x-8 lg:space-x-4'>
+                                {
+                                    navLink.map((nav) => <>
+                                        <li className='list-none relative  dots-nav hover:text-[#950007] text-[#393939] font-semibold' key={nav.id}>
+                                            <Link to={nav.to}>
+                                                <p>{nav.name}</p>
+                                            </Link>
+                                            {/* {
+                                                nav.subNav && (
+                                                    <IoIosArrowDown className={`text-[#262626] absolute right-[-18px] top-[6px] ${!subOpen && "rotate-180"}`} onClick={() => setSubOpen(!subOpen)} />
+                                                )
+                                            } */}
+                                        </li>
+
+                                        {/* {
+                                            nav.subNav && subOpen && open && (
+                                                <div className="absolute top-20 border px-4 py-4 z-10 bg-[#950007]  space-y-2">
+                                                    {
+                                                        nav.subNavItems.map(item => <li className='list-none text-white   hover:text-[#072159]  font-semibold cursor-pointer' key={item.id}>
+                                                            <Link to={item.to}>
+                                                            <p>{item.name}</p>
+                                                            </Link>
+                                                        </li>)
+                                                    }
+                                                </div>
+                                            )
+                                        } */}
+
+                                    </>)
+
+
+                                }
+
+
+                            </div>
+                            <div className='flex items-center text-sm font-medium space-x-3 text-[#393939]'>
+
+                                <button className='py-2 px-3 border border-[#04205A] hover:bg-[#950007]  hover:border-transparent hover:text-white duration-300 rounded'>Sign In / Sign Up</button>
+
+                                <button className='py-2 px-4 bg-[#950007] text-white tracking-wider
+                                    hover:bg-[#853336] duration-300 rounded'>
+                                    Submit
+                                </button>
+                            </div>
+                        </div>
+
+                        <div className='lg:hidden'>
+                            <p onClick={() => setIsOpen(true)} className='text-xl py-2 px-2 bg-[#950007] hover:bg-[#853236] duration-300 rounded text-white'><MdMenu /></p>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+                {/* --for-smalle-device-- */}
+
+                <div className={`lg:hidden fixed top-0 duration-300 z-50 left-0 w-[100%] h-screen bg-[#faf8f8] ${isOpen ? "left-0" : "left-[-100%]"}`}>
+                    <div className='bg-[#950007]'>
+                        <div className='flex items-center justify-between px-14 py-8'>
+                            <h2 className='text-[#fff] font-bold leading-4'>WESTREN<br></br>EDUCATION GROUP</h2>
+                            <p onClick={() => setIsOpen(false)} className='px-2 py-2 bg-[#fff] text-[#950007] rounded text-xl'><HiMiniXMark /></p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div className=' py-4'>
+                            <div className=''>
+                                {
+                                    navLink.map((nav) => <li className='list-none font-medium hover:bg-[#91000c23] text-[#262626] py-4 border-b px-14' key={nav.id}>
+                                        <Link to={nav.to}>
+                                            <p>{nav.name}</p>
+                                        </Link>
+                                    </li>)
+                                }
+                            </div>
+                            <div className='list-none font-medium bg-[#91000c23] text-[#262626]'>
+                                <p className='border-b px-14 py-4'>Sign In</p>
+                                <p className='border-b px-14 py-4'>Sing Up</p>
+                                <p className='border-b px-14 py-4'>
+                                    Submit
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default Navbar;
