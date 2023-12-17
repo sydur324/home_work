@@ -1,5 +1,6 @@
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter } from "react-icons/fa6";
 import { AiOutlineCopyrightCircle } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
     return (
@@ -46,7 +47,22 @@ const Footer = () => {
                         </div>
                     </div>
 
-                    <div></div>
+                    <div className="py-4 text-[#fff]">
+                        <h2 className="font-medium tracking-wider  py-4">Journals List</h2>
+
+                        <div className="text-sm space-y-2 text-[#ffffffb1] cursor-pointer">
+                            <p className="hover:text-[#91000D] cursor-pointer duration-300">Public Policy</p>
+                            <p className="hover:text-[#91000D] cursor-pointer duration-300">Social Science</p>
+                            <p className="hover:text-[#91000D] cursor-pointer duration-300">Women's Studies</p>
+                            <p className="hover:text-[#91000D] cursor-pointer duration-300">Humanities</p>
+                            <p className="hover:text-[#91000D] cursor-pointer duration-300">Communication</p>
+                            <p className="hover:text-[#91000D] cursor-pointer duration-300">Environmental Sciences</p>
+                            <p className="hover:text-[#91000D] cursor-pointer duration-300">Foreign Languages</p>
+                            <p className="hover:text-[#91000D] cursor-pointer duration-300">Health Sciences</p>
+                            <p className="hover:text-[#91000D] cursor-pointer duration-300">Human Rights</p>
+                            <p className="text-[#91000D] hover:scale-95 cursor-pointer duration-300">Browse More</p>
+                        </div>
+                    </div>
 
                     <div className="text-[#fff]">
                         <h2 className="font-medium tracking-wider  py-4">CONNECT</h2>
@@ -69,9 +85,17 @@ const Footer = () => {
                     </div>
 
                     <div className="flex items-center flex-wrap  space-x-8 text-sm text-[#ffffff86] cursor-pointer font-medium">
-                         <p className="hover:text-[#072159] duration-300">Accessibility </p>
-                         <p className="hover:text-[#072159] duration-300">Legal</p>
-                         <p className="hover:text-[#072159] duration-300">Privacy</p>
+
+                        <Link to="/accessibility">
+                            <p className="hover:text-[#072159] duration-300">Accessibility </p>
+                        </Link>
+
+                        <Link to="/privecy_policy">
+                            <p className="hover:text-[#072159] duration-300">Legal</p>
+                        </Link>
+                        <Link to="/privecy_policy">
+                            <p className="hover:text-[#072159] duration-300">Privacy</p>
+                        </Link>
                     </div>
                 </div>
             </div>

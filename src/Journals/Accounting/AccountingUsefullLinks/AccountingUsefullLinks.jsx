@@ -1,9 +1,10 @@
+import UseFullLinkPage from "../../../CommenFile/UseFullLinkPage/UseFullLinkPage";
 
 
 const AccountingUsefullLinks = () => {
     return (
         <div className="w-full">
-            use full link
+            <UseFullLinkPage></UseFullLinkPage>
         </div>
     );
 };

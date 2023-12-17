@@ -6,7 +6,7 @@ import './Navbar.css'
 import logo from '../../assets/img/WEG_LOGO.jpg'
 const Navbar = () => {
     const navLink = [
-        { id: 1, name: "Home", to: "" },
+        { id: 1, name: "Home", to: "/" },
         {
             id: 2, name: "Journals", to: "/subjects",
             subNav: true,
@@ -16,10 +16,10 @@ const Navbar = () => {
             ]
 
         },
-        { id: 3, name: "Research", to: "" },
-        { id: 4, name: "About Us", to: "" },
-        { id: 6, name: "Membership", to: "" },
-        { id: 7, name: "Contact", to: "" },
+        { id: 3, name: "Research", to: "/research" },
+        { id: 4, name: "About Us", to: "/about" },
+        { id: 6, name: "Membership", to: "/membership" },
+        { id: 7, name: "Contact", to: "/contact" },
     ]
 
     const [changeColor, setChangeColor] = useState()
@@ -42,7 +42,9 @@ const Navbar = () => {
                     <div className='flex items-center justify-between'>
 
                         <div className="w-1/6">
-                            <img className="lg:w-[50%] md:w-[50%]" src={logo} alt="" />
+                            <Link to='/'>
+                                <img className="lg:w-[45%] md:w-[50%] hover:scale-95 duration-300 cursor-pointer" src={logo} alt="" />
+                            </Link>
                         </div>
 
                         <div className='lg:flex items-center xl:space-x-12 lg:space-x-8 hidden'>
@@ -83,7 +85,7 @@ const Navbar = () => {
                             </div>
                             <div className='flex items-center text-sm font-medium space-x-3 text-[#393939]'>
 
-                                <button className='py-2 px-3 border border-[#04205A] hover:bg-[#950007]  hover:border-transparent hover:text-white duration-300 rounded'>Sign In / Sign Up</button>
+                                <Link to='/login'><button className='py-2 px-3 border border-[#04205A] hover:bg-[#950007]  hover:border-transparent hover:text-white duration-300 rounded'>Sign In / Sign Up</button></Link>
 
                                 <button className='py-2 px-4 bg-[#950007] text-white tracking-wider
                                     hover:bg-[#853336] duration-300 rounded'>

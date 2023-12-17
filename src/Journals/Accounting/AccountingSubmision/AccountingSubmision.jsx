@@ -1,9 +1,10 @@
+import Submission from "../../../CommenFile/Submission/Submission";
 
 
 const AccountingSubmision = () => {
     return (
         <div className="w-full">
-            this is submission
+            <Submission></Submission>
         </div>
     );
 };

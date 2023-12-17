@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './Banner.css'
 
 const Banner = () => {
@@ -12,8 +13,12 @@ const Banner = () => {
                 </p>
 
                 <div className='my-4 pt-4 text-base font-medium space-x-3'>
-                     <button className='px-4 py-2 bg-[#950007] hover:bg-[#04205A] duration-300  text-white rounded'>Browse Journals</button>
-                     <button className='px-4 py-2 border text-white rounded hover:bg-[#950007] duration-300'>Read More</button>
+                    <Link to='/subjects'>
+                        <button className='px-4 py-2 bg-[#950007] hover:bg-[#04205A] duration-300  text-white rounded'>Browse Journals</button>
+                    </Link>
+                    <Link to='/about'>
+                        <button className='px-4 py-2 border text-white rounded hover:bg-[#950007] duration-300'>Read More</button>
+                    </Link>
                 </div>
             </div>
 

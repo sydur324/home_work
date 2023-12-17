@@ -1,9 +1,10 @@
 import React from 'react';
+import Resouch from '../../../CommenFile/Resouch/Resouch';
 
 const AccountingResouch = () => {
     return (
         <div className='w-full'>
-            this is resourch
+            <Resouch></Resouch>
         </div>
     );
 };

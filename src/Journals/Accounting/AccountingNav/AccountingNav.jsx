@@ -11,11 +11,11 @@ const AccountingNav = () => {
         { id: 8, name: "Browse Journals", to: "" },
         { id: 9, name: "Journal Policies", to: "/Ijatnet/policies" },
         { id: 10, name: "Useful Links", to: "/Ijatnet/usefull_link" },
-        { id: 11, name: "Latest Activities", to: "" },
-        { id: 12, name: "Subscription", to: "" },
-        { id: 13, name: "Information", to: "" },
-        { id: 14, name: "Index", to: "" },
-        { id: 15, name: "Archive", to: "" },
+        { id: 11, name: "Latest Activities", to: "/Ijatnet/latest_activities" },
+        { id: 12, name: "Subscription", to: "/Ijatnet/subcription" },
+        { id: 13, name: "Information", to: "/Ijatnet/information" },
+        { id: 14, name: "Index", to: "/Ijatnet/index" },
+        { id: 15, name: "Archive", to: "/Ijatnet/archive-ijat" },
     ]
     return (
         <div className="border lg:w-1/3">
