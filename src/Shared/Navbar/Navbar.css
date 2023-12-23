@@ -2,7 +2,7 @@
     position: relative;
 }
 .sub{
-    opacity:0;
+    opacity:1;
 }
 .down:hover.sub{
     opacity:1;

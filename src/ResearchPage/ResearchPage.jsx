@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import ResearchBox from "../HomePage/HomeResearch/ResearchBox/ResearchBox";
 import PageTitle from "../Utilities/PageTitle/PageTitle";
 import './ResearchPage.css'
+import RoutingTop from "../Utilities/PageTitle/RoutingTop/RoutingTop";
 
 
 const ResearchPage = () => {
@@ -25,20 +26,22 @@ const ResearchPage = () => {
                 </p>
             </div>
 
-            <div className='xl:px-20 lg:px-10 md:px-14 sm:px-12 px-12 my-8'>
-                <h2 className="text-[#91000D] font-semibold aimsscope">Ongoing Research</h2>
-                <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 gap-6 my-8">
-                    {
-                        researces.map((researce, index) => <ResearchBox key={researce.index} researce={researce}>
+            <RoutingTop>
+                <div className='xl:px-20 lg:px-10 md:px-14 sm:px-12 px-12 my-8'>
+                    <h2 className="text-[#91000D] font-semibold aimsscope">Ongoing Research</h2>
+                    <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 gap-6 my-8">
+                        {
+                            researces.map((researce, index) => <ResearchBox key={researce.index} researce={researce}>
 
-                        </ResearchBox>)
-                    }
-                </div>
+                            </ResearchBox>)
+                        }
+                    </div>
 
-                <div className="mt-[-3vh]">
-                    <h2 className='font-bold text-[#91000D] hover:text-[#04205A] duration-300 cursor-pointer'>More Research</h2>
+                    <div className="mt-[-3vh]">
+                        <h2 className='font-bold text-[#91000D] hover:text-[#04205A] duration-300 cursor-pointer'>More Research</h2>
+                    </div>
                 </div>
-            </div>
+            </RoutingTop>
         </div>
     );
 };

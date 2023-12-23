@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { MdMenu } from "react-icons/md";
 import { HiMiniXMark } from "react-icons/hi2";
+import { IoIosArrowDown } from "react-icons/io";
 import './Navbar.css'
 import logo from '../../assets/img/WEG_LOGO.jpg'
 const Navbar = () => {
@@ -17,7 +18,8 @@ const Navbar = () => {
 
         },
         { id: 3, name: "Research", to: "/research" },
-        { id: 4, name: "About Us", to: "/about" },
+
+        { id: 5, name: "About Us", to: "/about" },
         { id: 6, name: "Membership", to: "/membership" },
         { id: 7, name: "Contact", to: "/contact" },
     ]
@@ -47,40 +49,25 @@ const Navbar = () => {
                             </Link>
                         </div>
 
-                        <div className='lg:flex items-center xl:space-x-12 lg:space-x-8 hidden'>
-                            <div className='flex items-center xl:space-x-8 lg:space-x-4'>
+                        <div className='lg:flex items-center xl:space-x-8 lg:space-x-6 hidden'>
+                            <div className='flex items-center xl:space-x-8 lg:space-x-6'>
                                 {
                                     navLink.map((nav) => <>
-                                        <li className='list-none relative  dots-nav hover:text-[#950007] text-[#393939] font-semibold' key={nav.id}>
-                                            <Link to={nav.to}>
+                                        <li className='list-none  hover:text-[#950007] text-[#393939] font-semibold' key={nav.id}>
+                                            <NavLink to={nav.to}>
                                                 <p>{nav.name}</p>
-                                            </Link>
-                                            {/* {
-                                                nav.subNav && (
-                                                    <IoIosArrowDown className={`text-[#262626] absolute right-[-18px] top-[6px] ${!subOpen && "rotate-180"}`} onClick={() => setSubOpen(!subOpen)} />
-                                                )
-                                            } */}
+                                            </NavLink>
                                         </li>
-
-                                        {/* {
-                                            nav.subNav && subOpen && open && (
-                                                <div className="absolute top-20 border px-4 py-4 z-10 bg-[#950007]  space-y-2">
-                                                    {
-                                                        nav.subNavItems.map(item => <li className='list-none text-white   hover:text-[#072159]  font-semibold cursor-pointer' key={item.id}>
-                                                            <Link to={item.to}>
-                                                            <p>{item.name}</p>
-                                                            </Link>
-                                                        </li>)
-                                                    }
-                                                </div>
-                                            )
-                                        } */}
-
                                     </>)
 
 
                                 }
 
+                                {/* <div>
+                                    <Link to="/information">
+                                        <li className="list-none">Information</li>
+                                    </Link>
+                                </div> */}
 
                             </div>
                             <div className='flex items-center text-sm font-medium space-x-3 text-[#393939]'>

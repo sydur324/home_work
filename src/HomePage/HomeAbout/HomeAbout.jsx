@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import firstImg from '../../assets/img/abouthome01.jpg'
 import secondImg from '../../assets/img/abouthome02.jpg'
 
@@ -22,12 +23,14 @@ const HomeAbout = () => {
                                     was established in 2023 by a small group interested in research and publication.
                                 </p>
 
-                              
+
+                                <Link to='/about'>
                                     <button className='my-4 text-[#91000D] text-sm font-bold py-2 px-4 border 
                                 border-[#91000D] rounded hover:bg-[#91000D] hover:text-[#fff] duration-300 cursor-pointer'>
                                         Find Out More
                                     </button>
-                              
+                                </Link>
+
                             </div>
                         </div>
                     </div>
@@ -49,12 +52,14 @@ const HomeAbout = () => {
                                     professionals, graduate and undergraduate students..
                                 </p>
 
-                               
+
+                                <Link to='/about'>
                                     <button className='my-4 text-[#91000D] text-sm font-bold py-2 px-4 border 
                                 border-[#91000D] rounded hover:bg-[#91000D] hover:text-[#fff] duration-300 cursor-pointer'>
                                         Find Out More
                                     </button>
-                               
+                                </Link>
+
                             </div>
                         </div>
                     </div>

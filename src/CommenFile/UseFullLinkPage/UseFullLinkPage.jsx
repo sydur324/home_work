@@ -59,16 +59,11 @@ const UseFullLinkPage = () => {
                     <button
                         onClick={() => toggleTab(8)}
                         className={toggle === 8 ? "tabs active-tabs px-2 py-2" : "px-2 py-2 tabs"}
-                    >Current Issue</button>
+                    >Recommend to Friends</button>
 
                     <button
                         onClick={() => toggleTab(9)}
                         className={toggle === 9 ? "tabs active-tabs px-2 py-2" : "px-2 py-2 tabs"}
-                    >Recommend to Friends</button>
-
-                    <button
-                        onClick={() => toggleTab(10)}
-                        className={toggle === 10 ? "tabs active-tabs px-2 py-2" : "px-2 py-2 tabs"}
                     >Comment</button>
                 </div>
 
@@ -87,7 +82,7 @@ const UseFullLinkPage = () => {
                     </div>
                     <div className={toggle === 4 ? "content active-content" : "content"}>
                         <div className="my-8">
-                        <Subscribe></Subscribe>
+                            <Subscribe></Subscribe>
                         </div>
                     </div>
                     <div className={toggle === 5 ? "content active-content" : "content"}>
@@ -100,12 +95,9 @@ const UseFullLinkPage = () => {
                         <ToLibrarian></ToLibrarian>
                     </div>
                     <div className={toggle === 8 ? "content active-content" : "content"}>
-                        8
-                    </div>
-                    <div className={toggle === 9 ? "content active-content" : "content"}>
                         <ToFriends></ToFriends>
                     </div>
-                    <div className={toggle === 10 ? "content active-content" : "content"}>
+                    <div className={toggle === 9 ? "content active-content" : "content"}>
                         <Comment></Comment>
                     </div>
                 </div>

@@ -1,3 +1,4 @@
+import IjatArticles from '../../../Articles/IjatArticles/IjatArticles';
 import './AccountingHome.css'
 const AccountingHome = () => {
     return (
@@ -60,7 +61,9 @@ const AccountingHome = () => {
 
                 <div className='py-2'>
                     <h2 className='font-medium text-[#91000D] py-2'>Current Issue:</h2>
-                    
+                    <div>
+                         <IjatArticles></IjatArticles>
+                    </div>
                 </div>
             </div>
         </div>

@@ -35,15 +35,14 @@ const Footer = () => {
                         <h2 className="font-medium tracking-wider  py-4">INFORMATION FOR</h2>
 
                         <div className="text-sm space-y-2 text-[#ffffffb1] cursor-pointer">
-                            <p className="hover:text-[#91000D] cursor-pointer duration-300">E-Publication First<sup>TM</sup></p>
-                            <p className="hover:text-[#91000D] cursor-pointer duration-300">Plagiarism Policy</p>
-                            <p className="hover:text-[#91000D] cursor-pointer duration-300">Copyright Policy</p>
-                            <p className="hover:text-[#91000D] cursor-pointer duration-300">Review Policy</p>
-                            <p className="hover:text-[#91000D] cursor-pointer duration-300">Research Guidelines</p>
-                            <p className="hover:text-[#91000D] cursor-pointer duration-300">Publication Plan</p>
-                            <p className="hover:text-[#91000D] cursor-pointer duration-300">Journals</p>
-                            <p className="hover:text-[#91000D] cursor-pointer duration-300">Global Team</p>
-                            <p className="hover:text-[#91000D] cursor-pointer duration-300">Contact</p>
+                            <p className="hover:text-[#91000D] cursor-pointer duration-300"><Link to='/Ijatnet/policies'>E-Publication First<sup>TM</sup></Link></p>
+                            <p className="hover:text-[#91000D] cursor-pointer duration-300"><Link to='/Ijatnet/policies'>Plagiarism Policy</Link></p>
+                            <p className="hover:text-[#91000D] cursor-pointer duration-300"><Link to='/Ijatnet/policies'>Copyright Policy</Link></p>
+                            <p className="hover:text-[#91000D] cursor-pointer duration-300"><Link to='/Ijatnet/policies'>Review Policy</Link></p>
+                            <p className="hover:text-[#91000D] cursor-pointer duration-300"><Link to='/Ijatnet/resources'>Research Guidelines</Link></p>
+                            <p className="hover:text-[#91000D] cursor-pointer duration-300"><Link to='/Ijatnet/latest_activities'>Publication Plan</Link></p>
+                            <p className="hover:text-[#91000D] cursor-pointer duration-300"><Link to='/membership'>Membership</Link></p>
+                            <p className="hover:text-[#91000D] cursor-pointer duration-300"><Link to='/contact'>Contact</Link></p>
                         </div>
                     </div>
 

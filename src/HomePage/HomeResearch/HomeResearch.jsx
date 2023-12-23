@@ -31,7 +31,7 @@ const HomeResearch = () => {
             </div>
 
             <div className="mt-[-3vh]">
-                <Link to='/researchPage'>
+                <Link to='/research_details'>
                     <h2 className='font-bold text-[#91000D] hover:text-[#04205A] duration-300 cursor-pointer'>Browser more Research</h2>
                 </Link>
             </div>
