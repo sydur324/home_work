@@ -274,6 +274,12 @@ import PsychologyIssue from "../Journals/Psychology/PsychologyIssue/PsychologyIs
 import PsychologyScope from "../Journals/Psychology/PsychologyScope/PsychologyScope";
 import PsychologyBoard from "../Journals/Psychology/PsychologyBoard/PsychologyBoard";
 import PsychologyArcive from "../Journals/Psychology/PsychologyArcive/PsychologyArcive";
+import BiologyLayout from "../Layout/BiologyLayout";
+import BiologyHome from "../Journals/Biology/BiologyHome/BiologyHome";
+import BiologyIssue from "../Journals/Biology/BiologyIssue/BiologyIssue";
+import BiologyScope from "../Journals/Biology/BiologyScope/BiologyScope";
+import BiologyBoard from "../Journals/Biology/BiologyBoard/BiologyBoard";
+import BiologyArcive from "../Journals/Biology/BiologyArcive/BiologyArcive";
 
 
 export const router = createBrowserRouter([
@@ -1479,6 +1485,33 @@ export const router = createBrowserRouter([
                     {
                         path:"/jpbs/archive-jpbs",
                         element:<PsychologyArcive></PsychologyArcive>
+                    },
+                ]
+            },
+
+            {
+                path:"/aijb",
+                element:<BiologyLayout></BiologyLayout>,
+                children:[
+                    {
+                        path:"/aijb",
+                        element:<BiologyHome></BiologyHome>
+                    },
+                    {
+                        path:"/aijb/current-aijb",
+                        element:<BiologyIssue></BiologyIssue>
+                    },
+                    {
+                        path:"/aijb/scope-aijb",
+                        element:<BiologyScope></BiologyScope>
+                    },
+                    {
+                        path:"/aijb/editorial-board",
+                        element:<BiologyBoard></BiologyBoard>
+                    },
+                    {
+                        path:"/aijb/archive-aijb",
+                        element:<BiologyArcive></BiologyArcive>
                     },
                 ]
             }

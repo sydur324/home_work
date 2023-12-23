@@ -55,7 +55,7 @@ const Subjects = () => {
         { id: 3, name: "Architecture", to: "/jea", img: "https://i.ibb.co/YLF6Hx6/New-Project.jpg" },
         { id: 4, name: "Astronomy", to: "/ijpa", img: "https://i.ibb.co/YLF6Hx6/New-Project.jpg" },
         { id: 6, name: "Behavioral Science", to: "/jpbs", img: "https://i.ibb.co/YLF6Hx6/New-Project.jpg" },
-        { id: 7, name: "Biology", to: "", img: "https://i.ibb.co/YLF6Hx6/New-Project.jpg" },
+        { id: 7, name: "Biology", to: "/aijb", img: "https://i.ibb.co/YLF6Hx6/New-Project.jpg" },
         { id: 8, name: "Business Law", to: "/jble", img: "https://i.ibb.co/YLF6Hx6/New-Project.jpg" },
         { id: 9, name: "Communication", to: "/ijlc", img: "https://i.ibb.co/YLF6Hx6/New-Project.jpg" },
         { id: 10, name: "Contemporary Business", to: "", img: "https://i.ibb.co/YLF6Hx6/New-Project.jpg" },
