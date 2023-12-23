@@ -268,6 +268,12 @@ import PhysicsIssue from "../Journals/Physics/PhysicsIssue/PhysicsIssue";
 import PhysicsScope from "../Journals/Physics/PhysicsScope/PhysicsScope";
 import PhysicsBoard from "../Journals/Physics/PhysicsBoard/PhysicsBoard";
 import PhysicsArcive from "../Journals/Physics/PhysicsArcive/PhysicsArcive";
+import PsychologyLayout from "../Layout/PsychologyLayout";
+import PsychologyHome from "../Journals/Psychology/PsychologyHome/PsychologyHome";
+import PsychologyIssue from "../Journals/Psychology/PsychologyIssue/PsychologyIssue";
+import PsychologyScope from "../Journals/Psychology/PsychologyScope/PsychologyScope";
+import PsychologyBoard from "../Journals/Psychology/PsychologyBoard/PsychologyBoard";
+import PsychologyArcive from "../Journals/Psychology/PsychologyArcive/PsychologyArcive";
 
 
 export const router = createBrowserRouter([
@@ -1446,6 +1452,33 @@ export const router = createBrowserRouter([
                     {
                         path:"/ijpa/archive-ijpa",
                         element:<PhysicsArcive></PhysicsArcive>
+                    },
+                ]
+            },
+
+            {
+                path:"/jpbs",
+                element:<PsychologyLayout></PsychologyLayout>,
+                children:[
+                    {
+                        path:"/jpbs",
+                        element:<PsychologyHome></PsychologyHome>
+                    },
+                    {
+                        path:"/jpbs/current-jpbs",
+                        element:<PsychologyIssue></PsychologyIssue>
+                    },
+                    {
+                        path:"/jpbs/scope-jpbs",
+                        element:<PsychologyScope></PsychologyScope>
+                    },
+                    {
+                        path:"/jpbs/editorial-board",
+                        element:<PsychologyBoard></PsychologyBoard>
+                    },
+                    {
+                        path:"/jpbs/archive-jpbs",
+                        element:<PsychologyArcive></PsychologyArcive>
                     },
                 ]
             }
